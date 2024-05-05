@@ -11,7 +11,7 @@ export default function Login() {
             ex cumque eveniet itaque perspiciatis vitae repellat deserunt
             laborum consequatur eum repudiandae.
           </p>
-          <span>Do you have an account</span>
+          <span>Don't you have an account</span>
           <button>Register</button>
         </div>
         <div className="right">
