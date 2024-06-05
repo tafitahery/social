@@ -1,4 +1,10 @@
 const express = require("express");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const dotenv = require("dotenv");
+
+dotenv.config();
+
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/users");
 const postRoutes = require("./routes/posts");
@@ -6,6 +12,12 @@ const commentRoutes = require("./routes/comments");
 const likeRoutes = require("./routes/likes");
 
 const app = express();
+
+// Middlewares
+app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
+
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
