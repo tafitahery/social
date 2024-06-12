@@ -1,8 +1,8 @@
 const express = require("express");
-const { getPost } = require("../controllers/post");
+const { getPosts } = require("../controllers/post");
 
 const router = express.Router();
 
-router.get("/find/:postId", getPost);
+router.get("/", getPosts);
 
 module.exports = router;
