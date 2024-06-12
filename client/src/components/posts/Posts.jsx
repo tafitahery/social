@@ -11,9 +11,11 @@ export default function Posts() {
 
   return (
     <div className="posts">
-      {data.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
+      {error
+        ? "Something went wrong"
+        : isLoading
+        ? "loading"
+        : data.map((post) => <Post key={post.id} post={post} />)}
     </div>
   );
 }
